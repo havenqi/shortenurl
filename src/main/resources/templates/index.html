@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Shorten URL</title>
+</head>
+<body>
+    <p> Please input any valid URL in above to get a shortened URL here...</p>
+    <form action="#" th:action="@{/shortener}" method="post">
+        <input type="text" name="origUrl">
+        <input type="submit" value="convert"/>
+    </form>
+    <p>
+        The result is: <span th:text="${shortenedUrl}"> </span>
+    </p>
+</body>
+</html>
