@@ -34,8 +34,7 @@ public class URLConverterService {
         }
 
         String baseString = formatLocalURLFromShortener(localURL);
-        String shortenedURL = baseString + uniqueID;
-        return shortenedURL;
+        return baseString + uniqueID;
     }
 
     public String getLongURLFromID(String uniqueID) throws Exception {

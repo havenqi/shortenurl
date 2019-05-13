@@ -1,0 +1,94 @@
+//////////////////////////////////////////
+
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+
+//////////////////////////////////////////
+
+ifdef::backend-html5[]
+:twoinches: width='144'
+:full-width: width='100%'
+:half-width: width='50%'
+:half-size:
+:thumbnail: width='60'
+endif::[]
+ifdef::backend-pdf[]
+:twoinches: pdfwidth='2in'
+:full-width: pdfwidth='100vw'
+:half-width: pdfwidth='50vw'
+:half-size: pdfwidth='50%'
+:thumbnail: pdfwidth='20mm'
+endif::[]
+ifdef::backend-docbook5[]
+:twoinches: width='50mm'
+:full-width: scaledwidth='100%'
+:half-width: scaledwidth='50%'
+:half-size: width='50%'
+:thumbnail: width='20mm'
+endif::[]
+
+:doctype: book
+:toc: left
+:toclevels: 9
+:sectnums:
+:sectanchors:
+:sectlinks:
+:sectnumlevels: 10
+:icons: font
+:docinfo:
+:experimental:
+
+ifndef::projectdir[:projectdir: .]
+:imagesdir: {projectdir}/assets/images
+
+
+= URL Shortener Service
+
+== Overview
+
+
+== System
+
+image::http301.png[Kibana,{half-size}]
+
+
+== Diagram
+
+
+
+== Todo
+
+=== Web UI:
+* [ ] Expand the input box
+* [x] Controller needs to handle http://localhost:8080/shortener
+
+=== Service:
+* [ ] Deal with duplication of the same long URL
+* [ ] Wrong URL handling, direct to err page instead of throwing exception
+
+=== Prod:
+* [ ] Redis setup
+
+=== Doc:
+* [ ] Swagger investigation
+
+
+=== Test:
+* [ ] Unit test MVC
+
+=== Sonarlint:
+* [ ] Clean the warnings
